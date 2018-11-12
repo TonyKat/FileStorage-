@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Скачивание файлов</title>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <link rel="stylesheet" href="{% static 'css/storage.css' %}">
+    </head>
+    <body >
+        <div class="download_file">
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <p>{{ download_data }}
+                        <input type="submit" value="Скачать" ></p>
+                </div>
+            </form>
+        </div>
+        <h1><a href="{% url 'main_menu_url' %}">Переход в главное меню...</a></h1>
+    </body>
+</html>

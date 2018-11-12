@@ -1,0 +1,47 @@
+.page-header {
+    background-color: dodgerblue;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header a{
+    color: black;
+    margin-top: 0;
+    font-size: 26pt;
+}
+
+.upload_data2 {
+    background-color: lightseagreen;
+    font-size: 14pt;
+}
+
+.download_file {
+    background-color: seagreen;
+    margin-top: 0;
+    padding: 15px 15px 15px 30px;
+    font-size: 14pt;
+}
+
+.delete_file {
+    background-color: silver;
+    margin-top: 0;
+    padding: 15px 15px 15px 30px;
+    font-size: 14pt;
+}
+
+.not_found_file {
+    background-color: darkolivegreen;
+    margin-top: 0;
+    padding: 15px 15px 15px 30px;
+    font-size: 14pt;
+}
+
+.not_found_file div {
+    color: black;
+    margin-top: 0;
+    font-size: 18pt;
+}
+
+.not_found_file h1 {
+    font-size: 24pt;
+}

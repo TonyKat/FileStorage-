@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Удаление файлов</title>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <link rel="stylesheet" href="{% static 'css/storage.css' %}">
+    </head>
+    <body >
+        <div class="delete_file">
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <p>{{ delete_data }}
+                        <input type="submit" value="Удалить" ></p>
+                </div>
+                <table>
+                    {% if file_name == '' %}
+                        <tr><td>Файл не найден!</td></tr>
+                    {% else %}
+                        <tr>
+                            <th>Информация о предыдущем файле:</th>
+                        </tr>
+                        <tr>
+                            <td>Имя файла: {{ file_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Хэш файла: {{ hash_file }}</td>
+                        </tr>
+                        <tr>
+                            <td>Файл удален: {{ success }}</td>
+                        </tr>
+                    {% endif %}
+                </table>
+            </form>
+        </div>
+        <h1><a href="{% url 'main_menu_url' %}">Переход в главное меню...</a></h1>
+    </body>
+</html>
